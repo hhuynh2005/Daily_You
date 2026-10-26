@@ -29,6 +29,7 @@ import 'package:flutter/services.dart' show rootBundle;
 import 'package:path/path.dart';
 import 'package:path_provider/path_provider.dart';
 import 'package:sqflite/sqflite.dart';
+import 'package:daily_you/config_provider.dart';
 
 class DatabaseNewerThanAppException implements Exception {
   final int databaseVersion;
@@ -402,16 +403,7 @@ CREATE TABLE $attachmentsTable (
 
   @visibleForTesting
   Future<void> createWelcomeEntry() async {
-    final deviceLocale = WidgetsBinding.instance.platformDispatcher.locale;
-    Locale locale;
-    if (AppLocalizations.delegate.isSupported(deviceLocale)) {
-      locale = deviceLocale;
-    } else {
-      final langOnly = Locale(deviceLocale.languageCode);
-      locale = AppLocalizations.delegate.isSupported(langOnly)
-          ? langOnly
-          : const Locale('en');
-    }
+    final locale = ConfigProvider.instance.getOverrideLanguage() ?? const Locale('vi');
     final l10n = await AppLocalizations.delegate.load(locale);
     final now = DateTime.now();
 

@@ -58,16 +58,7 @@ class TemplatesProvider with ChangeNotifier {
   }
 
   Future<void> createDefaultTemplates() async {
-    final deviceLocale = WidgetsBinding.instance.platformDispatcher.locale;
-    Locale locale;
-    if (AppLocalizations.delegate.isSupported(deviceLocale)) {
-      locale = deviceLocale;
-    } else {
-      final langOnly = Locale(deviceLocale.languageCode);
-      locale = AppLocalizations.delegate.isSupported(langOnly)
-          ? langOnly
-          : const Locale('en');
-    }
+    final locale = ConfigProvider.instance.getOverrideLanguage() ?? const Locale('vi');
     final l10n = await AppLocalizations.delegate.load(locale);
     final defaultTemplates = [
       Template(

@@ -15,6 +15,7 @@ import 'package:daily_you/models/tag_category.dart';
 import 'package:daily_you/models/tag_icon_type.dart';
 import 'package:daily_you/utils/generated/tag_icon_registry.dart';
 import 'package:material_ui/material_ui.dart';
+import 'package:daily_you/config_provider.dart';
 
 class TagSection {
   final TagCategory? category;
@@ -308,16 +309,7 @@ class TagsProvider with ChangeNotifier {
   }
 
   Future<void> createDefaultTags() async {
-    final deviceLocale = WidgetsBinding.instance.platformDispatcher.locale;
-    Locale locale;
-    if (AppLocalizations.delegate.isSupported(deviceLocale)) {
-      locale = deviceLocale;
-    } else {
-      final langOnly = Locale(deviceLocale.languageCode);
-      locale = AppLocalizations.delegate.isSupported(langOnly)
-          ? langOnly
-          : const Locale('en');
-    }
+    final locale = ConfigProvider.instance.getOverrideLanguage() ?? const Locale('vi');
     final l10n = await AppLocalizations.delegate.load(locale);
     final now = DateTime.now();
 

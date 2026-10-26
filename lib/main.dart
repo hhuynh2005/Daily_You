@@ -132,7 +132,7 @@ void onThisDayCallbackDispatcher() async {
               android:
                   AndroidInitializationSettings('@drawable/ic_notification'),
               linux: LinuxInitializationSettings(
-                  defaultActionName: 'On This Day')));
+                  defaultActionName: 'Ngày này năm xưa')));
 
       // Localized notification text is stored in SharedPreferences upon startup
       var prefs = await SharedPreferences.getInstance();
@@ -141,7 +141,7 @@ void onThisDayCallbackDispatcher() async {
 
       var androidDetails = AndroidNotificationDetails(
         'daily_you_on_this_day',
-        title ?? 'On This Day',
+        title ?? 'Ngày này năm xưa',
         icon: '@drawable/ic_notification',
         importance: Importance.defaultImportance,
         priority: Priority.defaultPriority,
@@ -181,7 +181,7 @@ void callbackDispatcher() async {
               android:
                   AndroidInitializationSettings('@drawable/ic_notification'),
               linux:
-                  LinuxInitializationSettings(defaultActionName: 'Log Today')));
+                  LinuxInitializationSettings(defaultActionName: 'Ghi chép hôm nay')));
 
       // Localized notification text is stored in SharedPreferences upon startup
       var prefs = await SharedPreferences.getInstance();
@@ -190,7 +190,7 @@ void callbackDispatcher() async {
 
       var androidPlatformChannelSpecifics = AndroidNotificationDetails(
         'daily_you_reminder',
-        title ?? "Log Today!",
+        title ?? "Ghi chép hôm nay!",
         icon: '@drawable/ic_notification',
         importance: Importance.defaultImportance,
         priority: Priority.defaultPriority,
@@ -508,9 +508,9 @@ class _MainAppState extends State<MainApp> {
                 ],
                 locale: configProvider.getOverrideLanguage(),
                 supportedLocales: [
-                  Locale("en"),
+                  Locale("vi"),
                   ...AppLocalizations.supportedLocales
-                      .where((locale) => locale.languageCode != "en")
+                      .where((locale) => locale.languageCode != "vi")
                 ],
                 localeResolutionCallback: (locale, supportedLocales) {
                   final override = configProvider.getOverrideLanguage();
@@ -524,7 +524,7 @@ class _MainAppState extends State<MainApp> {
                     }
                   }
 
-                  return const Locale('en');
+                  return const Locale('vi');
                 },
                 theme: lightTheme,
                 darkTheme: darkTheme,
