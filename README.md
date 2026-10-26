@@ -1,3 +1,18 @@
+# Thông tin sinh viên thực hiện
+
+* **Họ và tên:** Nguyễn Văn Huỳnh
+* **Mã số sinh viên (MSSV):** 2351170599
+* **Học phần:** Phát triển ứng dụng trên thiết bị di động (Mobile App Development)
+* **Nội dung thực hiện:**
+  - Thiết lập môi trường phát triển (Flutter SDK, Android SDK, Gradle, dependencies).
+  - Biên dịch và vận hành thành công ứng dụng trên máy ảo Android (Pixel 34 / Android 14).
+  - Rà soát toàn bộ hệ thống giao diện, chuỗi thông báo và tài nguyên ngôn ngữ.
+  - Chuyển đổi và dịch thuật 100% nội dung hiển thị sang tiếng Việt chuẩn chuyên môn.
+  - Cấu hình tiếng Việt làm ngôn ngữ mặc định (giao diện, mẫu nhật ký mặc định, thẻ mặc định, bài chào mừng).
+  - Kiểm thử toàn diện các chức năng và kiểm soát chất lượng hiển thị.
+
+---
+
 <p align="center">
 <img width="500" src="assets/banner.gif" alt="Daily You Logo">
 </p>
@@ -92,23 +107,6 @@ The full development environment is defined using [Nix](https://nixos.org/). Sim
 ### Translations 
 **Daily You** uses [Weblate](https://weblate.org) to easily manage translations. If you would like to help translate the app, please visit [the Daily You project on Weblate](https://hosted.weblate.org/projects/daily-you/). Everyone should have access to a journal!
 
-
----
-
-## Thông tin sinh viên thực hiện (Contributor)
-
-* **Họ và tên:** Nguyễn Văn Huỳnh
-* **Mã số sinh viên (MSSV):** 2351170599
-* **Học phần:** Phát triển ứng dụng trên thiết bị di động (Mobile App Development)
-* **Nội dung thực hiện:**
-  - Thiết lập môi trường phát triển (Flutter SDK, Android SDK, Gradle, dependencies).
-  - Biên dịch và vận hành thành công ứng dụng trên máy ảo Android (Pixel 34 / Android 14).
-  - Rà soát toàn bộ hệ thống giao diện, chuỗi thông báo và tài nguyên ngôn ngữ.
-  - Chuyển đổi và dịch thuật 100% nội dung hiển thị sang tiếng Việt chuẩn chuyên môn.
-  - Cấu hình tiếng Việt làm ngôn ngữ mặc định (giao diện, mẫu nhật ký mặc định, thẻ mặc định, bài chào mừng).
-  - Kiểm thử toàn diện các chức năng và kiểm soát chất lượng hiển thị.
-
----
 
 ## License
 This software is free software licensed under the [GNU General Public License 3.0](LICENSE.txt). Additional terms under section 7 of that license apply; see [ADDITIONAL_TERMS.md](ADDITIONAL_TERMS.md).
